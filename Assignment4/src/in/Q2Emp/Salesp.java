@@ -16,8 +16,13 @@ public class Salesp extends WageEmp {
 		commission = 0;
 	}
 	
-	public int Salary() {
-		int Salary = super.Salary() + itemsold*commission;
+	public int SalesSalary() {
+		int Salary = super.WESalary() + itemsold*commission;
+		return Salary;
+	}
+	
+	public int WESalary() {
+		int Salary = super.WESalary();
 		return Salary;
 	}
 
@@ -25,6 +30,10 @@ public class Salesp extends WageEmp {
 		return super.show()+ "\nItemsold : " + itemsold + "\nCommission : " + commission ;
 	}
 	
+	public String tostring() {
+		return super.toString()+" "+WESalary();
+	}
+	 
 	
 	
 }

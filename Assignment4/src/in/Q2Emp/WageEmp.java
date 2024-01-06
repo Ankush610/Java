@@ -32,7 +32,7 @@ public class WageEmp extends Employee {
 		this.rate = rate;
 	}
 
-	public int Salary() {
+	public int WESalary() {
 		int Salary = hour * rate;
 		return Salary;
 	}
@@ -41,6 +41,13 @@ public class WageEmp extends Employee {
 		String x = super.show();
 		return x+ "\nHours : "+hour+"\nRate : "+rate;
 	}
+
+	@Override
+	public String toString() {
+		return ""+WESalary();
+	}
+	
+	
 
 	
 	
